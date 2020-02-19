@@ -1,0 +1,36 @@
+<html>
+	<meta charset="window-1252">
+	<script>
+		contatos = new Array();
+		function Inserir(){
+			var tamanho = contatos.length;
+			objN = document.getElementById("nome");
+			contatos[tamanho] = objN.value;
+			objN.value = "";
+			tamanho++;
+			objT = document.getElementById("telefone");
+			contatos[tamanho] = objT.value;
+			objT.value = "";
+			imprimir();
+			ObjN.focus();
+		}
+		function.Imprimir(){
+			var texto = "<table><tr><th>Nome</th>";
+			texto += "<th>Nome</th>";
+			texto += "<th>Telefone</th></tr>";
+			var c=0;
+			var cont=1;
+			while = (c<contatos.length){
+				texto += "<tr><td>"+cont+"</td>";
+				cont++;
+				texto += "<td>"+contatos[c];
+				c++;
+				texto += "</td><td>"+contatos[c];
+				c++;
+			}
+			texto += "</table>
+			objA = Documento.getElementById("area")
+			objA.innerHTML = texto;
+		}
+	</script>			
+</html>

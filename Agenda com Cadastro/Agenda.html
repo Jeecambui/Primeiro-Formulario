@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<meta charse="window-1252">
+	<head>
+	<script language="javascript" type="text/javascript">
+	function validar() {
+	var nome = form1.nome.value;
+	var endereço = form1.endereço.value;
+	var numero = form1.numero.value;
+	var complemento = form1.complemento.value;
+	var bairro = form1.bairro.value;
+	var estado = form1.estado.value;
+	var cidade = form1.cidade.value;
+	var email = form1..value;
+	var residencial = form1.residencial.value;
+	var celular = form1.celular.value;
+
+	if (nome == "") {
+	alert('Preencha o campo com seu nome');
+	form1.nome.focus();
+	return false;
+	}
+	}
+	</script>
+	</head>
+	<body>
+		<form>
+		<div><h1>Agenda de Contatos</h1>
+			<label>Nome: </label>
+			<input type="text" id="nome"><br><br>
+			<label>Endereço: </label>
+			<input type="text" id="endereço">
+			<label>,Numero: </label>
+			<input type="text" id="numero">
+			<label>,Complemento: </label>
+			<input type="text" id="complemento"><br><br>
+			<label>Bairro: </label>
+			<input type="text" id="bairro">
+				<label>Estado: </label>
+				<select name="estados">
+					<option selected="" value="">Selecione o Estado</option>
+					<option value="Acre">Acre</option>
+					<option value="Alagoas">Alagoas</option>
+					<option value="Amapá">Amapá</option>
+					<option value="Amazonas">Amazonas</option>
+					<option value="Bahia">Bahia</option>
+					<option value="Ceará">Ceará</option>
+					<option value="Distrito Federal">Distrito Federal</option>
+					<option value="Espírito Santo">Espírito Santo</option>
+					<option value="Goiás">Goiás</option>
+					<option value="Maranhão">Maranhão</option>
+					<option value="Mato Grosso">Mato Grosso</option>
+					<option value="Mato Grosso do Sul">Mato Grosso do Sul</option>
+					<option value="Minas Gerais">Minas Gerais</option>
+					<option value="Pará">Pará</option>
+					<option value="Paraíba">Paraíba</option>
+					<option value="Paraná">Paraná</option>
+					<option value="Pernambuco">Pernambuco</option>
+					<option value="Piauí">Piauí</option>
+					<option value="Rio de Janeiro">Rio de Janeiro</option>
+					<option value="Rio Grande do Sul">Rio Grande do Sul</option>
+					<option value="Rio Grande do Norte">Rio Grande do Norte</option>
+					<option value="Rondônia">Rondônia</option>
+					<option value="Roraima">Roraima</option>
+					<option value="Santa Catarina">Santa Catarina</option>
+					<option value="São Paulo">São Paulo</option>
+					<option value="Sergipe">Sergipe</option>
+					<option value="Tocantins">Tocantins</option>
+				</select>
+			
+				<label>Cidade: </label>
+				<select name="cidade"><br><br>
+					<option selected="" value="">Selecione a Cidade</option>
+					<option value="aguas de lindoia">Águas de Lindóia</option>
+					<option value="campinas">Campinas</option>
+					<option value="francisco morato">Francisco Morato</option>
+					<option value="jundia">Jundiaí</option>
+					<option value="são paulo">São Paulo</option>
+					<option value="são bernado">São Bernado</option>
+					<option value="são josé dos campos">São José dos Campos</option>
+					<option value="osasco">Osasco</option>
+				
+				</select><br><br>
+			
+			<label>E-mail: </label>
+			<input type="text" id="email"><br><br>
+			<label>Telefone: </label><br>	
+			<label>Residencial</label>
+			<input type="text" id="residencial"><br><br>
+			<label>Celular</label>
+			<input type="text" id="celular"><br><br>
+			<input type="submit" name="botao" value="Gravar Dados" />
+			<button type="reset" value="reset">Resetar</button>
+		</form>
+		</div>
+		<div id="area"></div>
+		
+		</script>			
+	</body>
+</html>
+
+
+
+		<script>
+			contatos = new Array();
+			function Inserir(){
+				var tamanho = contatos.length;
+				objN = document.getElementById("nome");
+				contatos[tamanho] = objN.value;
+				objN.value = "";
+				tamanho++;
+				objT = document.getElementById("telefone");
+				contatos[tamanho] = objT.value;
+				objT.value = "";
+				imprimir();
+				ObjN.focus();
+			}
+			function.Imprimir(){
+					var texto = "<table><tr><th>Nome</th>";
+					texto += "<th>Nome</th>";
+					texto += "<th>Telefone</th></tr>";
+					var c=0;
+					var cont=1;
+					while = (c<contatos.length){
+						texto += "<tr><td>"+cont+"</td>";
+						cont++;
+						texto += "<td>"+contatos[c];
+						c++;
+						texto += "</td><td>"+contatos[c];
+						c++;
+						}
+						texto += "</table>
+						objA = Documento.getElementById("area")
+						objA.innerHTML = texto;
+			}
+		</script>
